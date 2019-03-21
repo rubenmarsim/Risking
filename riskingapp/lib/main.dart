@@ -33,10 +33,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return new Scaffold(
-     /* appBar: AppBar(
+      appBar: AppBar(
 
         title: Text(widget.title),
-      ),*/
+      ),
       body: new Container(
 
         child: new Column(
