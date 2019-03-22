@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Risking',
       theme: ThemeData(
-
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Welcome Risking'),
@@ -39,11 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new Container(
 
-        child: new Column(
+        child: new Row(
 
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            new Image.asset("assets/images/fondo.jpg")
+            new CircularProgressIndicator(),
+            new Text("Loading"),
          ],
         ),
       ),
