@@ -40,7 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
         child: new Row(
 
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             new CircularProgressIndicator(),
             new Text("Loading"),
