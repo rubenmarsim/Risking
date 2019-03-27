@@ -40,7 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
         child: new Row(
 
-          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             new CircularProgressIndicator(),
