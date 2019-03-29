@@ -19,11 +19,11 @@ class _SplashScreenOneState extends State<SplashScreenOne> {
           ),
         Column(children: <Widget>[
           CircleAvatar(backgroundColor: Colors.blue,
-          radius:75.0,
+          radius:50.0,
           child: Icon(
-            Icons.shopping_basket,
+            Icons.kitchen,
             color: Colors.deepOrange,
-            size: 50.0,
+            size: 25.0,
           ),
           ),
         ],)
