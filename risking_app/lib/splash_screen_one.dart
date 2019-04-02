@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class  SplashScreenOne extends StatefulWidget {
   @override
   _SplashScreenOneState createState() => _SplashScreenOneState();
@@ -7,28 +8,38 @@ class  SplashScreenOne extends StatefulWidget {
 
 class _SplashScreenOneState extends State<SplashScreenOne> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context){    
     return Scaffold(
       body:Stack(
         fit:StackFit.expand,
         children: <Widget>[
-          Container(
+          Container(            
             decoration: BoxDecoration(
-              color: new Color(0xffc6ff00),             
+              color: new Color(0xff689f38),             
             ),
           ),
-        Column(children: <Widget>[
+        Column(mainAxisAlignment: MainAxisAlignment.center,
+        
+          children: <Widget>[          
           CircleAvatar(backgroundColor: Colors.blue,
           radius:50.0,
           child: Icon(
-            Icons.kitchen,
+            Icons.map,
             color: Colors.deepOrange,
-            size: 25.0,
+            size: 30.0,
           ),
           ),
+          Padding(
+            padding: EdgeInsets.only(top: 10.0)
+            ),
+            Text('Cargando',
+            style: TextStyle(color:Colors.blue,
+            fontSize: 24.0),
+            ),
         ],)
         ]
       ),
     );
   }
 }
+
