@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'splash_screen_one.dart';
 import 'dart:async';
+import 'login.dart';
 
 void main() => runApp(MaterialApp(
   title: 'Risking',
@@ -22,7 +22,7 @@ class _SplashScreenOneState extends State<SplashScreenOne> {
   @override
     void initState(){
       super.initState();
-      Timer(Duration(seconds: 5),()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>null)));
+      Timer(Duration(seconds: 5),()=> Navigator.push(context, MaterialPageRoute(builder:(context)=>loginpage() )));
     }
 
 
