@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'HomeMenu.dart';
+
+void main() => runApp(MaterialApp(
+  title: 'Risking',
+  theme: ThemeData(
+    primaryColor: new Color(0xff689f38),
+    accentColor: Colors.blue
+  ),
+  debugShowCheckedModeBanner :false,
+  home:LoginPage(),
+  routes: route,
+));
 
 class LoginPage extends StatefulWidget {
   static String tag = 'login-page';
   @override
   _LoginPageState createState() => new _LoginPageState();
 }
+
+
+
+var route=<String,WidgetBuilder>{
+  //"/login":(BuildContext context)=> LoginPage(),
+  "/home":(BuildContext context)=> HomeMenu(),
+};
 
 class _LoginPageState extends State<LoginPage> {
   @override
@@ -46,8 +65,10 @@ class _LoginPageState extends State<LoginPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        onPressed: () {
+        onPressed: (         
           
+        ) {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => HomeMenu()));
         },
         padding: EdgeInsets.all(12),
         color: Colors.lightBlueAccent,
