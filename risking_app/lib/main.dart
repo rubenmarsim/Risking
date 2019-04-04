@@ -10,7 +10,13 @@ void main() => runApp(MaterialApp(
   ),
   debugShowCheckedModeBanner :false,
   home:SplashScreenOne(),
+  routes: route,
 ));
+
+var route=<String,WidgetBuilder>{
+  "/login":(BuildContext context)=> LoginPage(),
+  //"/menu":(BuildContext context)=> MenuScreen(),
+};
 
 
 class  SplashScreenOne extends StatefulWidget {
@@ -22,7 +28,7 @@ class _SplashScreenOneState extends State<SplashScreenOne> {
   @override
     void initState(){
       super.initState();
-      Timer(Duration(seconds: 5),()=> Navigator.push(context, MaterialPageRoute(builder:(context)=>loginpage() )));
+      Timer(Duration(seconds: 5),()=> Navigator.pushNamed(context, "/login") );
     }
 
 
