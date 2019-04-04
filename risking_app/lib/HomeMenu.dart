@@ -18,7 +18,7 @@ class _HomePage extends State<HomeMenu> {
         child: CircleAvatar(
           radius: 72.0,
           backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/alucard.jpg'),
+          backgroundImage: AssetImage('assets/LogoRisking.png'),
         ),
       ),
     );
@@ -26,7 +26,7 @@ class _HomePage extends State<HomeMenu> {
     final welcome = Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
-        'Welcome Alucard',
+        'Home Risking',
         style: TextStyle(fontSize: 28.0, color: Colors.white),
       ),
     );
