@@ -9,9 +9,29 @@ class HomeMenu extends StatefulWidget {
 class _HomePage extends State<HomeMenu> {
   //static String tag = 'home-page';
   
+  final leftSection = new Container(
+    margin: EdgeInsets.all(5.0),
+    child: CircleAvatar(
+          radius: 72.0,
+          backgroundColor: Colors.transparent,
+          backgroundImage: AssetImage('assets/LogoAgua.jpg'),          
+        )
+  );
+  final middleSection = new Container(
+
+  );
+  final rightSection = new Container(
+    margin: EdgeInsets.all(5.0),
+    child: CircleAvatar(
+          radius: 72.0,
+          backgroundColor: Colors.transparent,
+          backgroundImage: AssetImage('assets/Tierra.jpg'),          
+        )
+  );
+
   @override
   Widget build(BuildContext context) {    
-    final alucard = Hero(
+    final logo = Hero(
       tag: 'hero',
       child: Padding(
         padding: EdgeInsets.all(16.0),
@@ -23,7 +43,7 @@ class _HomePage extends State<HomeMenu> {
       ),
     );
 
-    final welcome = Padding(
+    final textoinicio = Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
         'Home Risking',
@@ -32,17 +52,17 @@ class _HomePage extends State<HomeMenu> {
     );
 
     final aguaimg = Padding(
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.only(left: 5.0, top: 16.0, right: 16.0, bottom: 16.0),
       child: CircleAvatar(
           radius: 72.0,
           backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/LogoAgua.jpg'),
+          backgroundImage: AssetImage('assets/LogoAgua.jpg'),          
         ),
     );
 
     final body = Container(
       width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.all(28.0),
+      padding: EdgeInsets.all(0.0),
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
           Colors.green,
@@ -50,8 +70,14 @@ class _HomePage extends State<HomeMenu> {
         ]),
       ),
       child: Column(
-        children: <Widget>[alucard, welcome, aguaimg],
+        children: <Widget>[logo, textoinicio, 
+                            Row(children: <Widget>[
+                              leftSection,
+                              rightSection
+                            ],)
+                          ],
       ),
+      
     );
 
     return Scaffold(
