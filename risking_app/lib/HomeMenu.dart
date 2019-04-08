@@ -10,7 +10,7 @@ class _HomePage extends State<HomeMenu> {
   //static String tag = 'home-page';
   
   final leftSection = new Container(
-    margin: EdgeInsets.all(5.0),
+    margin: EdgeInsets.all(40.0),
     child: CircleAvatar(
           radius: 72.0,
           backgroundColor: Colors.transparent,
