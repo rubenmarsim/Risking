@@ -1,36 +1,37 @@
 import 'package:flutter/material.dart';
+import 'login.dart';
 
 class HomeMenu extends StatefulWidget {
   static String tag = 'home-page';
   @override
-  _HomePage createState() => new _HomePage();
-}
+  _HomePage createState() => new _HomePage();}
+
 
 class _HomePage extends State<HomeMenu> {
   //static String tag = 'home-page';
-  
+
   final leftSection = new Container(
-    margin: EdgeInsets.all(20.0),
-    child: CircleAvatar(
-          radius: 72.0,
-          backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/LogoAgua.jpg'),          
-        )
+      margin: EdgeInsets.all(20.0),
+      child: CircleAvatar(
+        radius: 72.0,
+        backgroundColor: Colors.transparent,
+        backgroundImage: AssetImage('assets/LogoAgua.jpg'),
+      )
   );
   final middleSection = new Container(
 
   );
   final rightSection = new Container(
-    margin: EdgeInsets.all(5.0),
-    child: CircleAvatar(
-          radius: 72.0,
-          backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/Tierra.jpg'),          
-        )
+      margin: EdgeInsets.all(5.0),
+      child: CircleAvatar(
+        radius: 72.0,
+        backgroundColor: Colors.transparent,
+        backgroundImage: AssetImage('assets/Tierra.jpg'),
+      )
   );
 
   @override
-  Widget build(BuildContext context) {    
+  Widget build(BuildContext context) {
     final logo = Hero(
       tag: 'hero',
       child: Padding(
@@ -51,15 +52,6 @@ class _HomePage extends State<HomeMenu> {
       ),
     );
 
-    final aguaimg = Padding(
-      padding: EdgeInsets.only(left: 5.0, top: 16.0, right: 16.0, bottom: 16.0),
-      child: CircleAvatar(
-          radius: 72.0,
-          backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/LogoAgua.jpg'),          
-        ),
-    );
-
     final body = Container(
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.all(0.0),
@@ -70,14 +62,19 @@ class _HomePage extends State<HomeMenu> {
         ]),
       ),
       child: Column(
-        children: <Widget>[logo, textoinicio, 
-                            Row(children: <Widget>[
-                              leftSection,
-                              rightSection
-                            ],)
-                          ],
+        children: <Widget>[logo, textoinicio,
+          Row(children: <Widget>[
+            new GestureDetector(
+              onTap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>LoginPage()));
+              },
+            ),
+            leftSection,
+            rightSection
+          ],)
+        ],
       ),
-      
+
     );
 
     return Scaffold(

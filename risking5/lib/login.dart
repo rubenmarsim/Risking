@@ -19,7 +19,6 @@ class LoginPage extends StatefulWidget {
 }
 
 
-
 var route=<String,WidgetBuilder>{
   //"/login":(BuildContext context)=> LoginPage(),
   "/home":(BuildContext context)=> HomeMenu(),

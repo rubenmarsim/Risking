@@ -1,4 +1,4 @@
-package com.example.risking_app;
+package com.example.risking5;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

@@ -1,6 +1,6 @@
-# risking_app
+# risking5
 
-A new Flutter project.
+A new Flutter application.
 
 ## Getting Started
 
