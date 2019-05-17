@@ -49,6 +49,9 @@ flutter:
   # https://flutter.io/assets-and-images/#from-packages
     - assets/LogoAgua.jpg
     - assets/Tierra.jpg
+    - assets/raft.jpg
+    - assets/barranq.jpg
+    - assets/subma.jpg
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
