@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'HomeMenu.dart';
+import 'WaterSports.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner :false,
@@ -15,24 +15,6 @@ class _RaftingPage extends State<Rafting> {
   @override
   Widget build(BuildContext context) {
 
-
-    final loginButton = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: RaisedButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
-        ),
-        onPressed: (         
-          
-        ) {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => HomeMenu()));
-        },
-        padding: EdgeInsets.all(12),
-        color: Colors.lightBlueAccent,
-        child: Text('Log In', style: TextStyle(color: Colors.white)),
-      ),
-    );
-
     final background = Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
@@ -41,6 +23,19 @@ class _RaftingPage extends State<Rafting> {
         ]),
       ), //BoxDecoration
     ); //Cont
+
+    final button = Padding(
+      padding: EdgeInsets.symmetric(vertical: 16.0),
+      child: RaisedButton(
+        onPressed: (
+            ) {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => WaterSportsPage()));
+        },
+        padding: EdgeInsets.all(20),
+        color: Colors.lightBlueAccent,
+        child: Text('Log In', style: TextStyle(color: Colors.greenAccent)),
+      ),
+    );
 
     final textoinicio = Padding(
       padding: EdgeInsets.all(8.0),
@@ -65,6 +60,7 @@ class _RaftingPage extends State<Rafting> {
                     new SizedBox(
                       child: textoinicio,
                     ),
+                    button,
                   ],
                 ),
               ))

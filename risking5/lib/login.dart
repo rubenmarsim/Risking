@@ -64,9 +64,9 @@ class _LoginPageState extends State<LoginPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        onPressed: (         
-          
-        ) {
+        onPressed: (
+
+            ) {
           Navigator.push(context, MaterialPageRoute(builder: (context) => HomeMenu()));
         },
         padding: EdgeInsets.all(12),
